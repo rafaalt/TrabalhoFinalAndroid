@@ -1,5 +1,6 @@
 package edu.coltec.dupla.rafaelgabriel.trabalhofinal;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -12,6 +13,9 @@ public class CadastroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         EditText txtNome = findViewById(R.id.cadastroNomeReceita);
         EditText txtAutor = findViewById(R.id.cadastroAutor);

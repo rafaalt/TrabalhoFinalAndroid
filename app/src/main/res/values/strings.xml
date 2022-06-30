@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TrabalhoFinal</string>
+    <string name="search">Search</string>
+    <string name="refresh">Refresh</string>
+    <string name="settings">Settings</string>
+    <string name="share">Settings</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
 </resources>
