@@ -23,6 +23,8 @@ public class ReceitaAdapter extends BaseAdapter {
     private Context context;
     private List<Receita> receitas;
 
+    public ReceitaAdapter(){}
+
     public ReceitaAdapter(Context context) {
         AppDB appDB = new AppDB(context);
         ReceitaBLL receitaBLL = new ReceitaBLL(appDB);

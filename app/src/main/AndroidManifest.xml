@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TrabalhoFinal">
         <activity
-            android:name=".ReceitaAdapter"
+            android:name=".view.ReceitaDetailActivity"
             android:exported="false" />
         <activity
             android:name=".view.MainActivity"

@@ -1,9 +1,10 @@
 package edu.coltec.dupla.rafaelgabriel.trabalhofinal.dao;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class Receita {
+public class Receita implements Serializable {
 
     private int id;
     private String nome;

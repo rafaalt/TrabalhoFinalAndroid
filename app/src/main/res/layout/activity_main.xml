@@ -12,6 +12,7 @@
 
         <ListView
             android:layout_width="wrap_content"
+            android:clickable="true"
             android:layout_height="wrap_content"
             android:id="@+id/mainList"
             tools:listitem="@layout/adapter_receita"/>

@@ -11,12 +11,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.R;
+import edu.coltec.dupla.rafaelgabriel.trabalhofinal.dao.Receita;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,10 +31,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         FloatingActionButton fab_telaDeCadastro = findViewById(R.id.floating_action_button);
 
-        ListView tasksList = this.findViewById(R.id.mainList);
+        ListView lista = this.findViewById(R.id.mainList);
         receitaAdapter = new ReceitaAdapter(this);
-        tasksList.setAdapter(receitaAdapter);
+        lista.setAdapter(receitaAdapter);
 
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Receita receita = (Receita ) receitaAdapter.getItem(i);
+
+                Intent intent = new Intent(MainActivity.this, ReceitaDetailActivity.class);
+                intent.putExtra("receita", receita);
+                startActivity(intent);
+            }
+        });
         //Navegar para tela cadastro de receitas
         fab_telaDeCadastro.setOnClickListener(new View.OnClickListener() {
             @Override
