@@ -10,11 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TrabalhoFinal">
         <activity
+            android:name=".view.CategoriaActivity"
+            android:exported="false"
+            android:parentActivityName=".view.MainActivity"/>
+        <activity
+            android:name=".view.CadastroCategoria"
+            android:exported="false"
+            android:parentActivityName=".view.CategoriaActivity"/>
+        <activity
             android:name=".view.ReceitaDetailActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".view.MainActivity"/>
         <activity
             android:name=".view.MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".view.MainActivity"/>
         <activity
             android:name=".view.CadastroActivity"
             android:exported="false"

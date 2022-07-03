@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/receitas_bottomNav"
+        android:title="Receitas"
+        android:icon="@drawable/ic_baseline_restaurant_24"
+        />
+
+    <item
+        android:id="@+id/categorias_bottomNav"
+        android:title="Categorias"
+        android:icon="@drawable/ic_baseline_categoria_24"
+        />
+
+    <item
+        android:id="@+id/sair_bottomNav"
+        android:title="Sair"
+        android:icon="@drawable/ic_baseline_exit_to_app_24"
+        />
+
+</menu>

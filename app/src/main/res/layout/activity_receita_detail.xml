@@ -11,7 +11,48 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25dp"
-        android:id="@+id/detailTxt"/>
+        android:id="@+id/txt_detail_nome"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:id="@+id/txt_detail_autor"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:id="@+id/txt_detail_categoria"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:id="@+id/txt_detail_categoria_id"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:id="@+id/txt_detail_ingredientes"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:id="@+id/txt_detail_preparo"/>
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="3"
+        style="?android:attr/ratingBarStyleSmall"
+        android:id="@+id/rtn_detail_dificuldade" />
+
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

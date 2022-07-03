@@ -7,6 +7,23 @@
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/TrabalhoFinal/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/TrabalhoFinal/app/src/main/res/layout/activity_receita_detail.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/TrabalhoFinal/app/src/main/res/layout/adapter_receita.xml" value="0.25" />
+        <entry key="..\:/Users/briza/StudioProjects/TrabalhoFinalAndroid/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.298" />
+        <entry key="..\:/Users/briza/StudioProjects/TrabalhoFinalAndroid/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.298" />
+        <entry key="..\:/Users/briza/StudioProjects/TrabalhoFinalAndroid/app/src/main/res/drawable/ic_baseline_categoria_24.xml" value="0.298" />
+        <entry key="..\:/Users/briza/StudioProjects/TrabalhoFinalAndroid/app/src/main/res/drawable/ic_baseline_exit_to_app_24.xml" value="0.298" />
+        <entry key="..\:/Users/briza/StudioProjects/TrabalhoFinalAndroid/app/src/main/res/drawable/ic_baseline_refresh_24.xml" value="0.298" />
+        <entry key="..\:/Users/briza/StudioProjects/TrabalhoFinalAndroid/app/src/main/res/drawable/ic_baseline_restaurant_24.xml" value="0.298" />
+        <entry key="..\:/Users/briza/StudioProjects/TrabalhoFinalAndroid/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.298" />
+        <entry key="..\:/Users/briza/StudioProjects/TrabalhoFinalAndroid/app/src/main/res/drawable/selector.xml" value="0.298" />
+        <entry key="..\:/Users/briza/StudioProjects/TrabalhoFinalAndroid/app/src/main/res/layout/activity_cadastro.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/briza/StudioProjects/TrabalhoFinalAndroid/app/src/main/res/layout/activity_cadastro_categoria.xml" value="0.33" />
+        <entry key="..\:/Users/briza/StudioProjects/TrabalhoFinalAndroid/app/src/main/res/layout/activity_categoria.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/briza/StudioProjects/TrabalhoFinalAndroid/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/briza/StudioProjects/TrabalhoFinalAndroid/app/src/main/res/layout/activity_receita_detail.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/briza/StudioProjects/TrabalhoFinalAndroid/app/src/main/res/layout/activity_splash_screen.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/briza/StudioProjects/TrabalhoFinalAndroid/app/src/main/res/layout/adapter_receita.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/briza/StudioProjects/TrabalhoFinalAndroid/app/src/main/res/menu/bottomnav.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/briza/StudioProjects/TrabalhoFinalAndroid/app/src/main/res/menu/menu_action_bar.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

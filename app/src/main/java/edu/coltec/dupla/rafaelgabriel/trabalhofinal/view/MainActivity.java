@@ -1,5 +1,6 @@
 package edu.coltec.dupla.rafaelgabriel.trabalhofinal.view;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.core.view.MenuItemCompat;
@@ -15,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.R;
@@ -31,9 +33,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         FloatingActionButton fab_telaDeCadastro = findViewById(R.id.floating_action_button);
 
+        BottomNavigationView bottomNav = findViewById(R.id.bottomNav);
+        bottomNav.setSelectedItemId(R.id.receitas_bottomNav);
+
         ListView lista = this.findViewById(R.id.mainList);
         receitaAdapter = new ReceitaAdapter(this);
         lista.setAdapter(receitaAdapter);
+
 
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -45,6 +51,26 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.receitas_bottomNav:
+                        return true;
+                    case R.id.categorias_bottomNav:
+                        startActivity(new Intent(getApplicationContext(), CategoriaActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.sair_bottomNav:
+                        finish();
+                        System.exit(0);
+                        return true;
+                }
+                return false;
+            }
+        });
+
         //Navegar para tela cadastro de receitas
         fab_telaDeCadastro.setOnClickListener(new View.OnClickListener() {
             @Override
