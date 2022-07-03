@@ -1,31 +1,37 @@
-package edu.coltec.dupla.rafaelgabriel.trabalhofinal;
+package edu.coltec.dupla.rafaelgabriel.trabalhofinal.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
-import androidx.appcompat.widget.ShareActionProvider;
 import androidx.core.view.MenuItemCompat;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.service.controls.actions.FloatAction;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import edu.coltec.dupla.rafaelgabriel.trabalhofinal.R;
+
 public class MainActivity extends AppCompatActivity {
+
+    ReceitaAdapter receitaAdapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         FloatingActionButton fab_telaDeCadastro = findViewById(R.id.floating_action_button);
+
+        ListView tasksList = this.findViewById(R.id.mainList);
+        receitaAdapter = new ReceitaAdapter(this);
+        tasksList.setAdapter(receitaAdapter);
 
         //Navegar para tela cadastro de receitas
         fab_telaDeCadastro.setOnClickListener(new View.OnClickListener() {
@@ -96,5 +102,13 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        receitaAdapter.updateList();
+        receitaAdapter.notifyDataSetChanged();
     }
 }

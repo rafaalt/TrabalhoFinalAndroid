@@ -5,101 +5,125 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp"
-    tools:context=".CadastroActivity">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cadastro de Receita"
-        android:textSize="30dp"
-        android:layout_gravity="center"
-        android:textStyle="bold"/>
-
-    <EditText
+    tools:context=".view.CadastroActivity">
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nome"
-        android:id="@+id/cadastroNomeReceita"/>
+        android:layout_height="match_parent">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Autor"
-        android:id="@+id/cadastroAutor"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ingredientes Atuais: \n\n"
-        android:textSize="20dp"
-        android:id="@+id/cadastroListaIngredientes"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cadastro de Receita"
+                android:textSize="30dp"
+                android:layout_gravity="center"
+                android:textStyle="bold"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/cadastroIngredienteAtual"
-        android:hint="Ingrediente"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome"
+                android:id="@+id/cadastroNomeReceita"/>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:paddingHorizontal="30dp"
-        android:layout_height="wrap_content">
-        <Button
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:text="Adicionar"
-            android:id="@+id/cadastroBtnAdicionar"/>
-        <Button
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:text="Limpar"
-            android:id="@+id/cadastroBtnLimpar"
-            android:layout_alignParentRight="true"/>
-    </RelativeLayout>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Autor"
+                android:id="@+id/cadastroAutor"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:id="@+id/cadastroModoPreparo"
-        android:hint="Modo de Preparo"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dificuldade:"
-        android:layout_gravity="center"
-        android:textSize="20dp"
-        android:layout_marginTop="20dp"/>
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="5"/>
-    </RadioGroup>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingredientes Atuais: "
+                android:textSize="20dp"
+                android:id="@+id/cadastroTxtIngredientesHelp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\n"
+                android:textSize="20dp"
+                android:id="@+id/cadastroListaIngredientes"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cadastrar"
-        android:textAllCaps="false"
-        android:layout_gravity="center"
-        android:id="@+id/cadastroBtnCadastrar"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cadastroIngredienteAtual"
+                android:hint="Ingrediente"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:paddingHorizontal="30dp"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Adicionar"
+                    android:id="@+id/cadastroBtnAdicionar"/>
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Limpar"
+                    android:id="@+id/cadastroBtnLimpar"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/cadastroModoPreparo"
+                android:hint="Modo de Preparo"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cadastroCategoria"
+                android:hint="Categoria"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dificuldade:"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"/>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:id="@+id/cadastroRadioDificuldade">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"/>
+            </RadioGroup>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cadastrar"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:id="@+id/cadastroBtnCadastrar"/>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

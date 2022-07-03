@@ -1,20 +1,19 @@
-package edu.coltec.dupla.rafaelgabriel.trabalhofinal;
+package edu.coltec.dupla.rafaelgabriel.trabalhofinal.dao;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Objects;
 
 public class Receita {
+
+    private int id;
     private String nome;
     private String autor;
-    private String fotoUrl;
     private ArrayList<String> ingredientes;
     private String modoDePreparo;
-    private ArrayList<String> categoria;
+    private Category categoria;
     private int dificuldade;
 
-    public Receita(String nome, String autor, String fotoUrl, ArrayList<String> categoria, ArrayList<String> ingredientes, String modoDePreparo, int dificuldade) {
-        this.fotoUrl = fotoUrl;
+    public Receita(String nome, String autor, Category categoria, ArrayList<String> ingredientes, String modoDePreparo, int dificuldade) {
         this.autor = autor;
         this.nome = nome;
         this.categoria = categoria;
@@ -23,8 +22,9 @@ public class Receita {
         this.dificuldade = dificuldade;
     }
 
-    public Receita(String nome, String autor, ArrayList<String> categoria, ArrayList<String> ingredientes, String modoDePreparo, int dificuldade) {
-        this.fotoUrl = "";
+
+    public Receita(int id, String nome, String autor, Category categoria, ArrayList<String> ingredientes, String modoDePreparo, int dificuldade) {
+        this.id = id;
         this.autor = autor;
         this.nome = nome;
         this.categoria = categoria;
@@ -33,22 +33,12 @@ public class Receita {
         this.dificuldade = dificuldade;
     }
 
-    public Receita(){
-        this.fotoUrl = "";
-        this.autor =  "";
-        this.nome =  "";
-        this.categoria = new ArrayList<>();
-        this.ingredientes = new ArrayList<>();
-        this.modoDePreparo = "";
-        this.dificuldade = 0;
+    public int getId() {
+        return id;
     }
 
-    public String getFotoUrl() {
-        return fotoUrl;
-    }
-
-    public void setFotoUrl(String fotoUrl) {
-        this.fotoUrl = fotoUrl;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -91,6 +81,14 @@ public class Receita {
         this.dificuldade = dificuldade;
     }
 
+    public Category getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Category categoria) {
+        this.categoria = categoria;
+    }
+
     //Verifica se duas receitas sao iguais
     @Override
     public boolean equals(Object o) {
@@ -103,5 +101,22 @@ public class Receita {
     @Override
     public int hashCode() {
         return Objects.hash(autor, nome);
+    }
+
+    public boolean isValid() {
+        if (this.nome == null || this.nome.equals(""))
+            return false;
+        if (this.autor == null || this.autor.equals(""))
+            return false;
+        if (!categoria.isValid())
+            return false;
+        if (this.dificuldade == 0)
+            return false;
+        if (this.modoDePreparo == null || this.modoDePreparo.equals(""))
+            return false;
+        if (this.ingredientes.isEmpty())
+            return false;
+
+        return true;
     }
 }

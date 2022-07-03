@@ -1,10 +1,12 @@
-package edu.coltec.dupla.rafaelgabriel.trabalhofinal;
+package edu.coltec.dupla.rafaelgabriel.trabalhofinal.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import edu.coltec.dupla.rafaelgabriel.trabalhofinal.R;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -19,7 +21,7 @@ public class SplashScreen extends AppCompatActivity {
             public void run() {
                 mostrarMainActivity();
             }
-        }, 3000);
+        }, 2000);
 
     }
 

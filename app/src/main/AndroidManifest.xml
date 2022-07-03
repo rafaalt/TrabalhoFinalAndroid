@@ -10,25 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TrabalhoFinal">
         <activity
-            android:name=".MainActivity"
+            android:name=".ReceitaAdapter"
             android:exported="false" />
-
         <activity
-            android:parentActivityName=".MainActivity"
-            android:name=".CadastroActivity"
+            android:name=".view.MainActivity"
             android:exported="false" />
-
         <activity
-            android:name=".SplashScreen"
-            android:theme="@style/Theme.TrabalhoFinal.NoActionBar"
-            android:exported="true">
+            android:name=".view.CadastroActivity"
+            android:exported="false"
+            android:parentActivityName=".view.MainActivity" />
+        <activity
+            android:name=".view.SplashScreen"
+            android:exported="true"
+            android:theme="@style/Theme.TrabalhoFinal.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

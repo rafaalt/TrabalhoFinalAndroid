@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ReceitaAdapter"
+    android:padding="20dp">
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/no_pic"
+        android:id="@+id/adapterImagem"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome Receita"
+        android:textStyle="bold"
+        android:id="@+id/adapterNome"
+        android:layout_toRightOf="@id/adapterImagem"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:text="Autor: Fulano"
+        android:layout_below="@id/adapterNome"
+        android:layout_toRightOf="@id/adapterImagem"
+        android:textStyle="italic"
+        android:id="@+id/adapterAutor"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dificuldade: "
+        android:textSize="15dp"
+        android:layout_below="@id/adapterAutor"
+        android:layout_toRightOf="@id/adapterImagem"
+        android:id="@+id/adaptarTxtDificuldade"/>
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="3"
+        style="?android:attr/ratingBarStyleSmall"
+        android:id="@+id/adapterDificuldade"
+        android:layout_below="@id/adapterAutor"
+        android:layout_toRightOf="@id/adaptarTxtDificuldade"/>
+</RelativeLayout>
