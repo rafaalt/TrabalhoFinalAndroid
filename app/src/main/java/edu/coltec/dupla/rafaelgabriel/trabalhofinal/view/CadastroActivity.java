@@ -45,6 +45,7 @@ public class CadastroActivity extends AppCompatActivity {
         btnAdicionar.setOnClickListener(view -> {
             String string = txtIngred.getText().toString();
             String txtAntigo = txtIngredientes.getText().toString();
+            txtIngred.setText("");
             ingredientesAux.add(string);
             txtIngredientes.setText(txtAntigo + string + ", ");
         });

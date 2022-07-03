@@ -63,7 +63,7 @@ public class ReceitaAdapter extends BaseAdapter {
         RatingBar ratingBar = retorno.findViewById(R.id.adapterDificuldade);
 
         nomeReceita.setText(receitaAtual.getNome());
-        autorReceita.setText(receitaAtual.getAutor());
+        autorReceita.setText("Autor: " + receitaAtual.getAutor());
         ratingBar.setRating(receitaAtual.getDificuldade());
 
         return retorno;

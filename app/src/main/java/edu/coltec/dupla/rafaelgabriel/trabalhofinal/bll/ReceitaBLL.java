@@ -18,7 +18,7 @@ public class ReceitaBLL {
     }
 
     public boolean create(String name, String description, String categoryName, ArrayList<String> ingredientes, String modoPreparo, int dificuldade) {
-        ReceitaDAO taskDAO = new ReceitaDAO(this.appDB);
+        ReceitaDAO receitaDAO = new ReceitaDAO(this.appDB);
         CategoryDAO categoryDAO = new CategoryDAO(this.appDB);
 
         Category category = categoryDAO.getByName(new Category(categoryName));
@@ -35,11 +35,11 @@ public class ReceitaBLL {
         if (!newTask.isValid())
             return false;
 
-        Receita task = taskDAO.getByName(newTask);
+        Receita task = receitaDAO.getByName(newTask);
         if (task != null)
             return false;
 
-        boolean result = taskDAO.create(newTask);
+        boolean result = receitaDAO.create(newTask);
         return result;
     }
 
@@ -51,4 +51,10 @@ public class ReceitaBLL {
 
         return tasks;
     }
+
+    public boolean delete(Receita receita){
+        ReceitaDAO receitaDAO = new ReceitaDAO(this.appDB);
+        return receitaDAO.delete(receita);
+    }
+
 }

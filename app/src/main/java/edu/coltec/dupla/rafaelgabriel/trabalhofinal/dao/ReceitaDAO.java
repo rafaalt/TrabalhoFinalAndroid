@@ -144,4 +144,22 @@ public class ReceitaDAO {
         }
         return tasks;
     }
+
+    public boolean delete(Receita receita){
+        boolean result = true;
+        SQLiteDatabase removeDb = this.appDB.getWritableDatabase();
+
+        try {
+            int id = receita.getId();
+            String whereClause = "id=?";
+            String[] params = new String[] { String.valueOf(id) };
+            removeDb.delete(TABLE_NAME, whereClause, params);
+        } catch (Exception e) {
+            result = false;
+        } finally {
+            removeDb.close();
+        }
+
+        return result;
+    }
 }
