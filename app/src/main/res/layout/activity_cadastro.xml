@@ -17,7 +17,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cadastro de Receita"
+                android:text="@string/cadastroDeReceita"
+                android:layout_marginTop="15dp"
                 android:textSize="30dp"
                 android:layout_gravity="center"
                 android:textStyle="bold"/>
@@ -25,19 +26,19 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nome"
+                android:hint="@string/nomeHint"
                 android:id="@+id/cadastroNomeReceita"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Autor"
+                android:hint="@string/autorHint"
                 android:id="@+id/cadastroAutor"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ingredientes Atuais: "
+                android:text="@string/ingredientesAtuais"
                 android:textSize="20dp"
                 android:id="@+id/cadastroTxtIngredientesHelp"/>
             <TextView
@@ -51,41 +52,47 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/cadastroIngredienteAtual"
-                android:hint="Ingrediente"/>
+                android:hint="@string/ingrediente"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:paddingHorizontal="30dp"
                 android:layout_height="wrap_content">
+
                 <Button
-                    android:layout_width="120dp"
+                    android:id="@+id/cadastroBtnAdicionar"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Adicionar"
-                    android:id="@+id/cadastroBtnAdicionar"/>
+                    android:text="@string/adicionar"
+                    android:backgroundTint="@color/ForestGreen"
+                    app:icon="@drawable/ic_baseline_add_24" />
+
                 <Button
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:text="Limpar"
                     android:id="@+id/cadastroBtnLimpar"
-                    android:layout_alignParentRight="true"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/limpar"
+                    android:backgroundTint="@color/red"
+                    app:icon="@drawable/ic_baseline_remove_24" />
             </RelativeLayout>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:id="@+id/cadastroModoPreparo"
-                android:hint="Modo de Preparo"/>
+                android:hint="@string/modoDePreparo"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/cadastroCategoria"
-                android:hint="Categoria"/>
+                android:hint="@string/categoria"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dificuldade:"
+                android:text="@string/dificuldade"
                 android:layout_gravity="center"
                 android:textSize="20dp"
                 android:layout_marginTop="20dp"/>
@@ -120,10 +127,10 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cadastrar"
-                android:textAllCaps="false"
+                android:text="@string/cadastrar"
                 android:layout_gravity="center"
-                android:id="@+id/cadastroBtnCadastrar"/>
+                android:id="@+id/cadastroBtnCadastrar"
+                app:icon="@drawable/ic_baseline_add_task_24"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

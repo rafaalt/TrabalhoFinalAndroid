@@ -30,14 +30,17 @@
             android:id="@+id/floating_action_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_margin="16dp"
             android:layout_above="@id/bottomNav"
-            app:srcCompat="@drawable/ic_baseline_add_24"
-            app:backgroundTint="@color/purple_200"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:backgroundTint="@color/Gold2"
+            android:textColor="@color/white"
             app:elevation="6dp"
             app:fabSize="normal"
-            />
+            app:srcCompat="@drawable/ic_baseline_addwhite_24" />
 
         <!-- BottomNavigation -->
         <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -45,12 +48,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            app:itemBackground="@color/purple_200"
+            app:itemBackground="@color/black"
             app:itemIconTint="@drawable/selector"
             app:itemTextColor="@drawable/selector"
             app:menu="@menu/bottomnav" />
 
     </RelativeLayout>
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

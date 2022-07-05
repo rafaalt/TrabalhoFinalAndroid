@@ -23,22 +23,33 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/autor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:text="Autor: Fulano"
         android:layout_below="@id/adapterNome"
         android:layout_toRightOf="@id/adapterImagem"
-        android:textStyle="italic"
-        android:id="@+id/adapterAutor"/>
+        android:text="@string/autorHint1"
+        android:textSize="18dp"
+        android:textStyle="italic" />
+
     <TextView
+        android:id="@+id/adapterAutor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dificuldade: "
-        android:textSize="15dp"
+        android:layout_below="@id/adapterNome"
+        android:layout_toRightOf="@id/autor"
+        android:text="Fulano"
+        android:textSize="18dp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/adaptarTxtDificuldade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/adapterAutor"
         android:layout_toRightOf="@id/adapterImagem"
-        android:id="@+id/adaptarTxtDificuldade"/>
+        android:text="@string/dificuldade1"
+        android:textSize="15dp" />
     <RatingBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

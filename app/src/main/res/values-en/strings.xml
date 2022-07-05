@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Cookbook</string>
+    <string name="search">Search</string>
+    <string name="refresh">Update</string>
+    <string name="settings">Settings</string>
+    <string name="share">Share</string>
+    <string name="about">Information</string>
+    <string name="exit">Exit</string>
+    <string name="cadastroDeReceita">Revenue Registration</string>
+    <string name="nomeHint">Name</string>
+    <string name="autorHint">Author</string>
+    <string name="autorHint1">Author:</string>
+    <string name="ingredientesAtuais">Current Ingredients:</string>
+    <string name="ingrediente">Ingredient</string>
+    <string name="ingredientes">Ingredients</string>
+    <string name="adicionar">Add</string>
+    <string name="limpar">Clean</string>
+    <string name="modoDePreparo">Preparation mode</string>
+    <string name="modoDePreparo1">Preparation mode:</string>
+    <string name="categoria">Category</string>
+    <string name="dificuldade">Difficulty</string>
+    <string name="dificuldade1">Difficulty:</string>
+    <string name="cadastrar">Register</string>
+    <string name="alterarFoto">Change Photo</string>
+    <string name="removerReceita">Remove Revenue</string>
+    <string name="ditarReceita">Edit Recipe</string>
+    <string name="categoria1">Categories</string>
+    <string name="receitas">Revenues</string>
+</resources>

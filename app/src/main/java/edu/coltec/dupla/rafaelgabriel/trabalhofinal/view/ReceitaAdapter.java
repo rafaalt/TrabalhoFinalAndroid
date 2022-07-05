@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -63,7 +64,7 @@ public class ReceitaAdapter extends BaseAdapter {
         RatingBar ratingBar = retorno.findViewById(R.id.adapterDificuldade);
 
         nomeReceita.setText(receitaAtual.getNome());
-        autorReceita.setText("Autor: " + receitaAtual.getAutor());
+        autorReceita.setText(receitaAtual.getAutor());
         ratingBar.setRating(receitaAtual.getDificuldade());
 
         return retorno;

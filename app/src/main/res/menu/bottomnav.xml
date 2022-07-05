@@ -3,19 +3,19 @@
 
     <item
         android:id="@+id/receitas_bottomNav"
-        android:title="Receitas"
+        android:title="@string/receitas"
         android:icon="@drawable/ic_baseline_restaurant_24"
         />
 
     <item
         android:id="@+id/categorias_bottomNav"
-        android:title="Categorias"
+        android:title="@string/categoria1"
         android:icon="@drawable/ic_baseline_categoria_24"
         />
 
     <item
         android:id="@+id/sair_bottomNav"
-        android:title="Sair"
+        android:title="@string/exit"
         android:icon="@drawable/ic_baseline_exit_to_app_24"
         />
 

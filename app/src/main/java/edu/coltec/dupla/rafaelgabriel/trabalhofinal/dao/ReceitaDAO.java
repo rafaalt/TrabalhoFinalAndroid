@@ -33,6 +33,7 @@ public class ReceitaDAO {
     private static final String MODOPREPARO_COLUMN = "mododepreparo";
 
 
+
     private AppDB appDB;
 
     public ReceitaDAO(AppDB appDB) {
@@ -88,7 +89,6 @@ public class ReceitaDAO {
                 String modo = res.getString(res.getColumnIndex(MODOPREPARO_COLUMN));
                 int dificuldade = res.getInt(res.getColumnIndex(DIFICULDADE_COLUMN));
                 String ing = res.getString(res.getColumnIndex(INGREDIENTES_COLUMN));
-
                 ArrayList<String> ingredientes = new ArrayList<>();
                 String[] ingredientesSeparados = ing.split("#");
                 for(int i = 0; i<ingredientesSeparados.length ; i++){
