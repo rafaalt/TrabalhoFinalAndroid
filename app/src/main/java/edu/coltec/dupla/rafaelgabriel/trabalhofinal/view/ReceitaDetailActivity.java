@@ -31,8 +31,9 @@ import edu.coltec.dupla.rafaelgabriel.trabalhofinal.bll.ReceitaBLL;
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.dao.AppDB;
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.dao.Receita;
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.dao.ReceitaDAO;
+import edu.coltec.dupla.rafaelgabriel.trabalhofinal.utils.AppCompat;
 
-public class ReceitaDetailActivity extends AppCompatActivity {
+public class ReceitaDetailActivity extends AppCompat {
 
     private static int FOTO_CODE = 1;
     private Receita receitaAtual;

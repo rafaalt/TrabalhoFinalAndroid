@@ -26,8 +26,9 @@ import java.util.ArrayList;
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.dao.AppDB;
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.R;
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.bll.ReceitaBLL;
+import edu.coltec.dupla.rafaelgabriel.trabalhofinal.utils.AppCompat;
 
-public class CadastroCategoria extends AppCompatActivity {
+public class CadastroCategoria extends AppCompat {
 
     private ArrayList<String> categoriasSelecionadas;
 

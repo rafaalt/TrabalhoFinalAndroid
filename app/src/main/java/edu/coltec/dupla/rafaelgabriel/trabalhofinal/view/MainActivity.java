@@ -21,8 +21,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.R;
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.dao.Receita;
+import edu.coltec.dupla.rafaelgabriel.trabalhofinal.utils.AppCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompat {
 
     ReceitaAdapter receitaAdapter;
 

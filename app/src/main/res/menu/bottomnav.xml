@@ -9,9 +9,11 @@
 
     <item
         android:id="@+id/categorias_bottomNav"
-        android:title="@string/categoria1"
-        android:icon="@drawable/ic_baseline_categoria_24"
+        android:title="@string/settings"
+        android:icon="@drawable/ic_baseline_settings_24"
         />
+
+
 
     <item
         android:id="@+id/sair_bottomNav"

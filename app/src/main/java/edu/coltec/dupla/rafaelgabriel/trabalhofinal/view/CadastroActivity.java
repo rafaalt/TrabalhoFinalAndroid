@@ -29,8 +29,9 @@ import java.util.ArrayList;
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.dao.AppDB;
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.R;
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.bll.ReceitaBLL;
+import edu.coltec.dupla.rafaelgabriel.trabalhofinal.utils.AppCompat;
 
-public class CadastroActivity extends AppCompatActivity {
+public class CadastroActivity extends AppCompat {
     private static int FOTO_CODE = 1;
     public static int CATEGORIA_CODE = 2;
 

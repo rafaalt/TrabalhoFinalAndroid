@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -23,19 +24,32 @@ import java.util.ArrayList;
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.dao.AppDB;
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.R;
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.bll.ReceitaBLL;
+import edu.coltec.dupla.rafaelgabriel.trabalhofinal.utils.AppCompat;
+import edu.coltec.dupla.rafaelgabriel.trabalhofinal.utils.IdiomaManager;
 
-public class CategoriaActivity extends AppCompatActivity {
+public class CategoriaActivity extends AppCompat {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categoria);
 
-        FloatingActionButton floating_action_button = findViewById(R.id.floating_action_button1);
+
         BottomNavigationView bottomNav = findViewById(R.id.bottomNav);
-
+        ImageView brasil_idioma = findViewById(R.id.img_brasil);
+        ImageView en_idioma = findViewById(R.id.img_en);
         bottomNav.setSelectedItemId(R.id.categorias_bottomNav);
+        IdiomaManager idiomaManager = new IdiomaManager(this);
 
+        brasil_idioma.setOnClickListener(view ->{
+            idiomaManager.updateResource("pt");
+            recreate();
+        });
+
+        en_idioma.setOnClickListener(view ->{
+            idiomaManager.updateResource("en");
+            recreate();
+        });
 
         bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -56,12 +70,6 @@ public class CategoriaActivity extends AppCompatActivity {
             }
         });
 
-        floating_action_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(CategoriaActivity.this, CadastroCategoria.class);
-                startActivity(intent);
-            }
-        });
+
     }
 }

@@ -18,7 +18,7 @@
             android:id="@+id/img_logoSplash"
             android:layout_width="match_parent"
             android:layout_marginTop="70dp"
-            android:layout_height="150dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
             app:srcCompat="@drawable/logo" />
 
@@ -26,7 +26,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="60dp"
             android:layout_gravity="center"
             android:textStyle="bold"
             android:textColor="@color/white"
@@ -36,7 +36,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
+            android:textSize="60dp"
             android:layout_gravity="center"
             android:textStyle="bold"
             android:textColor="@color/white"
@@ -47,14 +47,14 @@
             android:id="@+id/img_brasil"
             android:layout_width="match_parent"
             android:layout_marginTop="10dp"
-            android:layout_height="100dp"
+            android:layout_height="160dp"
             android:layout_gravity="center"
             app:srcCompat="@drawable/brasil" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="30dp"
             android:layout_marginTop="5dp"
             android:layout_gravity="center"
             android:textStyle="bold"
@@ -62,11 +62,12 @@
             android:text="Português PT-BR"
             />
 
+
         <ImageView
             android:id="@+id/img_en"
             android:layout_width="match_parent"
             android:layout_marginTop="10dp"
-            android:layout_height="100dp"
+            android:layout_height="160dp"
             android:textColor="@color/white"
             android:layout_gravity="center"
             app:srcCompat="@drawable/eua_1" />
@@ -75,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:textSize="20dp"
+            android:textSize="30dp"
             android:textColor="@color/white"
             android:layout_gravity="center"
             android:textStyle="bold"
@@ -96,6 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             app:itemBackground="@color/black"
+            android:background="@color/black"
             app:itemIconTint="@drawable/selector"
             app:itemTextColor="@drawable/selector"
             app:menu="@menu/bottomnav" />

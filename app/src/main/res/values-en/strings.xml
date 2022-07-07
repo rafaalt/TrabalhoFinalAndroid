@@ -28,4 +28,22 @@
     <string name="receitas">Revenues</string>
     <string name="categoriaHelp">Categories Selected:</string>
     <string name="listaVazia">Empty List</string>
+    <string name="idioma">Select a language:</string>
+    <string name="categorias">Categories</string>
+    <string name="Bolos">Cakes</string>
+    <string name="Tortas">Pies</string>
+    <string name="Doces">Candy</string>
+    <string name="Carnes">Meat</string>
+    <string name="Peixes">Fish</string>
+    <string name="FrutosdoMar">Seafood</string>
+    <string name="Saladas">Salads</string>
+    <string name="Molhos">Sauces</string>
+    <string name="Massas">Pastas</string>
+    <string name="Sopas">Soups</string>
+    <string name="Bebidas">Drinks</string>
+    <string name="Sobremesas">Desserts</string>
+    <string name="Lanches">Snacks</string>
+    <string name="Saudavel">Healthy</string>
+    <string name="Outros">Others</string>
+    <string name="Salvar">To save</string>
 </resources>

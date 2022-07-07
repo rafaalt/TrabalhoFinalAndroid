@@ -28,4 +28,24 @@
     <string name="receitas">Receitas</string>
     <string name="categoriaHelp">Categorias Selecionadas:</string>
     <string name="listaVazia">Lista vazia</string>
+    <string name="idioma">Selecione um idioma:</string>
+    <string name="categorias">Categorias</string>
+    <string name="Bolos">Bolos</string>
+    <string name="Tortas">Tortas</string>
+    <string name="Doces">Doces</string>
+    <string name="Carnes">Carnes</string>
+    <string name="Peixes">Peixes</string>
+    <string name="FrutosdoMar">Frutos do Mar</string>
+    <string name="Saladas">Saladas</string>
+    <string name="Molhos">Molhos</string>
+    <string name="Massas">Massas</string>
+    <string name="Sopas">Sopas</string>
+    <string name="Bebidas">Bebidas</string>
+    <string name="Sobremesas">Sobremesas</string>
+    <string name="Lanches">Lanches</string>
+    <string name="Saudavel">Saudavel</string>
+    <string name="Outros">Outros</string>
+    <string name="Salvar">Salvar</string>
+
+
 </resources>
