@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".view.CadastroCategoria">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -14,43 +15,111 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cadastro de Categoria"
-                android:textSize="30dp"
                 android:layout_gravity="center"
-                android:textStyle="bold"/>
+                android:text="Categorias"
+                android:textSize="30dp"
+                android:textStyle="bold" />
 
-            <EditText
-                android:layout_width="match_parent"
+            <CheckBox
+                android:id="@+id/checkBolo"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:hint="Nome"
-                android:id="@+id/cadastroNomeCategoria"/>
+                android:text="Bolos" />
 
-            <ImageView
-                android:id="@+id/img_cadastro_categoria"
-                android:layout_width="match_parent"
+            <CheckBox
+                android:id="@+id/checkTorta"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/no_pic"/>
+                android:text="Tortas" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:paddingHorizontal="30dp"
-                android:layout_height="wrap_content">
-                <Button
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:text="Enviar foto"
-                    android:id="@+id/cadastroBtnFoto"/>
-                <Button
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
-                    android:text="Cadastrar"
-                    android:id="@+id/cadastroBtn"
-                    android:layout_alignParentRight="true"/>
-            </RelativeLayout>
+            <CheckBox
+                android:id="@+id/checkDoce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doces" />
+
+            <CheckBox
+                android:id="@+id/checkCarne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carnes" />
+
+            <CheckBox
+                android:id="@+id/checkPeixe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Peixes" />
+
+            <CheckBox
+                android:id="@+id/checkFrutos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frutos do Mar" />
+
+            <CheckBox
+                android:id="@+id/checkSalada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saladas" />
+
+            <CheckBox
+                android:id="@+id/checkMolho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Molhos" />
+
+            <CheckBox
+                android:id="@+id/checkSopa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sopas" />
+
+            <CheckBox
+                android:id="@+id/checkMassa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Massas" />
+
+            <CheckBox
+                android:id="@+id/checkBebida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bebidas" />
+
+            <CheckBox
+                android:id="@+id/checkSobremesa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sobremesas" />
+
+            <CheckBox
+                android:id="@+id/checkLanche"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lanches" />
+
+            <CheckBox
+                android:id="@+id/checkSaudavel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saudável" />
+
+            <CheckBox
+                android:id="@+id/checkOutros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Outros" />
+
+            <Button
+                android:id="@+id/btnCadastroCategoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Salvar" />
 
         </LinearLayout>
     </ScrollView>

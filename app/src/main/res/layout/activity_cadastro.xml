@@ -13,6 +13,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="15dp"
             android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
@@ -34,6 +35,25 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/autorHint"
                 android:id="@+id/cadastroAutor"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/img_cadastro_categoria"
+                    android:layout_width="198dp"
+                    android:layout_height="195dp"
+                    app:srcCompat="@drawable/no_pic"
+                    android:layout_margin="20dp"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/img_cadastro_categoria"
+                    android:layout_centerVertical="true"
+                    android:text="Alterar"
+                    android:id="@+id/btnAlterarFoto"/>
+            </RelativeLayout>
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -83,11 +103,26 @@
                 android:id="@+id/cadastroModoPreparo"
                 android:hint="@string/modoDePreparo"/>
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/cadastroCategoria"
-                android:hint="@string/categoria"/>
+                android:text="@string/categoriaHelp"
+                android:textSize="20dp"
+                android:id="@+id/cadastroTxtCategoriasHelp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/listaVazia"
+                android:textSize="15dp"
+                android:id="@+id/cadastroTxtCategorias"/>
+            <Button
+                android:layout_width="58dp"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_baseline_add_24"
+                android:backgroundTint="@color/ForestGreen"
+                android:id="@+id/btnSelecionarCategorias"/>
+
 
             <TextView
                 android:layout_width="wrap_content"

@@ -9,7 +9,7 @@
     <string name="cadastroDeReceita">Cadastro de Receita</string>
     <string name="nomeHint">Nome</string>
     <string name="autorHint">Autor</string>
-    <string name="autorHint1">Autor:</string>
+    <string name="autorHint1">Autor: </string>
     <string name="ingredientesAtuais">Ingredientes Atuais:</string>
     <string name="ingrediente">Ingrediente</string>
     <string name="ingredientes">Ingredientes</string>
@@ -26,4 +26,6 @@
     <string name="ditarReceita">Editar Receita</string>
     <string name="categoria1">Categorias</string>
     <string name="receitas">Receitas</string>
+    <string name="categoriaHelp">Categorias Selecionadas:</string>
+    <string name="listaVazia">Lista vazia</string>
 </resources>

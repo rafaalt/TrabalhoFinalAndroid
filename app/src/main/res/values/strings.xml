@@ -26,4 +26,6 @@
     <string name="ditarReceita">Editar Receita</string>
     <string name="categoria1">Categorias</string>
     <string name="receitas">Receitas</string>
+    <string name="categoriaHelp">Categorias Selecionadas:</string>
+    <string name="listaVazia">Lista vazia</string>
 </resources>

@@ -20,6 +20,7 @@
         android:layout_toRightOf="@id/adapterImagem"
         android:text="Nome Receita"
         android:textSize="20dp"
+        android:layout_marginLeft="10dp"
         android:textStyle="bold" />
 
     <TextView
@@ -29,6 +30,7 @@
         android:layout_below="@id/adapterNome"
         android:layout_toRightOf="@id/adapterImagem"
         android:text="@string/autorHint1"
+        android:layout_marginLeft="10dp"
         android:textSize="18dp"
         android:textStyle="italic" />
 
@@ -48,6 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/adapterAutor"
         android:layout_toRightOf="@id/adapterImagem"
+        android:layout_marginLeft="10dp"
         android:text="@string/dificuldade1"
         android:textSize="15dp" />
     <RatingBar

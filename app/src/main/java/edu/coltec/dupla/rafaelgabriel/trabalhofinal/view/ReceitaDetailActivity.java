@@ -3,21 +3,27 @@ package edu.coltec.dupla.rafaelgabriel.trabalhofinal.view;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.R;
@@ -29,7 +35,7 @@ import edu.coltec.dupla.rafaelgabriel.trabalhofinal.dao.ReceitaDAO;
 public class ReceitaDetailActivity extends AppCompatActivity {
 
     private static int FOTO_CODE = 1;
-
+    private Receita receitaAtual;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         AppDB appDB = new AppDB(this);
@@ -48,7 +54,7 @@ public class ReceitaDetailActivity extends AppCompatActivity {
         Button bntEditarFoto = findViewById(R.id.detailBtnEditar);
         Intent intent = getIntent();
         Receita receita = (Receita) intent.getSerializableExtra("receita");
-
+        receitaAtual = receita;
         txt_detail_nome.setText(receita.getNome());
         txt_detail_autor.setText(receita.getAutor());
         txt_detail_ingredientes.setText(receita.getIngredientes().toString());
@@ -83,6 +89,23 @@ public class ReceitaDetailActivity extends AppCompatActivity {
             try {
                 photoNew = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
                 imageView.setImageBitmap(photoNew);
+
+                ContextWrapper cw = new ContextWrapper(getApplicationContext());
+                File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
+                File file = new File(directory, receitaAtual.getFotoDaReceita());
+                if(!file.exists()){
+                    Log.d("path", file.toString());
+                    FileOutputStream fos = null;
+                    try{
+                        fos = new FileOutputStream(file);
+                        photoNew.compress(Bitmap.CompressFormat.JPEG, 100, fos);
+                        Toast.makeText(ReceitaDetailActivity.this, "Imagem salva com sucesso", Toast.LENGTH_SHORT).show();
+                        fos.flush();
+                        fos.close();
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
 
                 //Converter para dados
                 byte[] fotoEmBytes;

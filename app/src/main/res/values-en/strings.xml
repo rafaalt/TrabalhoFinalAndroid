@@ -9,7 +9,7 @@
     <string name="cadastroDeReceita">Revenue Registration</string>
     <string name="nomeHint">Name</string>
     <string name="autorHint">Author</string>
-    <string name="autorHint1">Author:</string>
+    <string name="autorHint1">Author: </string>
     <string name="ingredientesAtuais">Current Ingredients:</string>
     <string name="ingrediente">Ingredient</string>
     <string name="ingredientes">Ingredients</string>
@@ -26,4 +26,6 @@
     <string name="ditarReceita">Edit Recipe</string>
     <string name="categoria1">Categories</string>
     <string name="receitas">Revenues</string>
+    <string name="categoriaHelp">Categories Selected:</string>
+    <string name="listaVazia">Empty List</string>
 </resources>

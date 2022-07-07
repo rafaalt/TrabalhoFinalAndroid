@@ -11,21 +11,30 @@ public class Receita implements Serializable {
     private String autor;
     private ArrayList<String> ingredientes;
     private String modoDePreparo;
-    private Category categoria;
+    private ArrayList<String> categoria;
     private int dificuldade;
     private String fotoDaReceita;
 
-    public Receita(String nome, String autor, Category categoria, ArrayList<String> ingredientes, String modoDePreparo, int dificuldade) {
+    public Receita(String nome, String autor, ArrayList<String> categoria, ArrayList<String> ingredientes, String modoDePreparo, int dificuldade, String fotoDaReceita) {
         this.autor = autor;
         this.nome = nome;
         this.categoria = categoria;
         this.ingredientes = ingredientes;
         this.modoDePreparo = modoDePreparo;
         this.dificuldade = dificuldade;
+        this.fotoDaReceita = fotoDaReceita;
     }
 
-
-    public Receita(int id, String nome, String autor, Category categoria, ArrayList<String> ingredientes, String modoDePreparo, int dificuldade) {
+    public Receita(String nome, String autor, ArrayList<String> categoria, ArrayList<String> ingredientes, String modoDePreparo, int dificuldade) {
+        this.autor = autor;
+        this.nome = nome;
+        this.categoria = categoria;
+        this.ingredientes = ingredientes;
+        this.modoDePreparo = modoDePreparo;
+        this.dificuldade = dificuldade;
+        this.fotoDaReceita = nome + ".jpeg";
+    }
+    public Receita(int id, String nome, String autor, ArrayList<String> categoria, ArrayList<String> ingredientes, String modoDePreparo, int dificuldade, String fotoDaReceita) {
         this.id = id;
         this.autor = autor;
         this.nome = nome;
@@ -33,6 +42,7 @@ public class Receita implements Serializable {
         this.ingredientes = ingredientes;
         this.modoDePreparo = modoDePreparo;
         this.dificuldade = dificuldade;
+        this.fotoDaReceita = fotoDaReceita;
     }
 
     public String getFotoDaReceita() {
@@ -91,11 +101,11 @@ public class Receita implements Serializable {
         this.dificuldade = dificuldade;
     }
 
-    public Category getCategoria() {
+    public ArrayList<String> getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(Category categoria) {
+    public void setCategoria(ArrayList<String> categoria) {
         this.categoria = categoria;
     }
 
@@ -118,7 +128,7 @@ public class Receita implements Serializable {
             return false;
         if (this.autor == null || this.autor.equals(""))
             return false;
-        if (!categoria.isValid())
+        if (this.categoria.isEmpty())
             return false;
         if (this.dificuldade == 0)
             return false;
