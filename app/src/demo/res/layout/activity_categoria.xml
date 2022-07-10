@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey11"
     tools:context=".view.CategoriaActivity">
 
 
@@ -17,7 +16,7 @@
         <ImageView
             android:id="@+id/img_logoSplash"
             android:layout_width="match_parent"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="20dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
             app:srcCompat="@drawable/logo" />
@@ -29,7 +28,6 @@
             android:textSize="20dp"
             android:layout_gravity="center"
             android:textStyle="bold"
-            android:textColor="@color/white"
             android:text="@string/settings"
             />
 
@@ -39,7 +37,6 @@
             android:textSize="30dp"
             android:layout_gravity="center"
             android:textStyle="bold"
-            android:textColor="@color/white"
             android:text="@string/idioma"
             />
 
@@ -58,7 +55,6 @@
             android:layout_marginTop="5dp"
             android:layout_gravity="center"
             android:textStyle="bold"
-            android:textColor="@color/white"
             android:text="Português PT-BR"
             />
 
@@ -76,7 +72,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:textSize="20dp"
-            android:textColor="@color/white"
             android:layout_gravity="center"
             android:textStyle="bold"
             android:text="English US"

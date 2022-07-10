@@ -111,19 +111,25 @@ public class MainActivity extends AppCompat {
                 Toast.makeText(this, "Clicou no search", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.action_refresh:
-                Toast.makeText(this, "Clicou no refresh", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.action_settings:
-                Toast.makeText(this, "Clicou no settings", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.action_exit:
-                finish();
-                System.exit(0);
+                AlertDialog.Builder alertBuilder1 = new AlertDialog.Builder(this);
+
+                alertBuilder1.setIcon(R.drawable.ic_baseline_emoji_events_24);
+                alertBuilder1.setTitle("Versão Premio");
+                alertBuilder1.setMessage("Garanta o acesso ao cadastro de novas receitas!");
+
+                alertBuilder1.setPositiveButton("Acessar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(getBaseContext(), "Você saiu da versão premio", Toast.LENGTH_LONG).show();
+                    }
+                });
+
+                AlertDialog dialog1 = alertBuilder1.create();
+                dialog1.show();
                 return true;
             case R.id.action_about:
                 AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
 
-                alertBuilder.setIcon(R.drawable.ic_launcher_foreground);
+                alertBuilder.setIcon(R.drawable.ic_baseline_restaurant_24);
                 alertBuilder.setTitle("Receitas Agenda Facil");
                 alertBuilder.setMessage("Dupla Gabriel e Rafael  Coltec - UFMG, Trabalho Final");
 

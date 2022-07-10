@@ -34,21 +34,24 @@
             android:layout_alignParentRight="true"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="100dp"
             android:textColor="@color/white"
             app:backgroundTint="@color/Gold2"
+            android:scaleX="2"
+            android:scaleY="2"
             app:elevation="6dp"
-            app:srcCompat="@drawable/ic_baseline_addwhite_24" />
+            app:srcCompat="@drawable/ic_baseline_add_50" />
 
         <!-- BottomNavigation -->
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNav"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="140dp"
             android:layout_alignParentBottom="true"
-            app:itemBackground="@color/black"
             android:background="@color/black"
+            app:itemBackground="@color/black"
+            app:itemIconSize="80dp"
             app:itemIconTint="@drawable/selector"
             app:itemTextColor="@drawable/selector"
             app:menu="@menu/bottomnav" />

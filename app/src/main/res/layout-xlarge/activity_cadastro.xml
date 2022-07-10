@@ -20,13 +20,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/cadastroDeReceita"
                 android:layout_marginTop="15dp"
-                android:textSize="30dp"
+                android:textSize="70dp"
                 android:layout_gravity="center"
                 android:textStyle="bold"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="40dp"
                 android:hint="@string/nomeHint"
                 android:id="@+id/cadastroNomeReceita"/>
 
@@ -34,6 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/autorHint"
+                android:textSize="40dp"
                 android:id="@+id/cadastroAutor"/>
 
             <RelativeLayout
@@ -41,37 +43,42 @@
                 android:layout_height="wrap_content">
                 <ImageView
                     android:id="@+id/img_cadastro_categoria"
-                    android:layout_width="198dp"
-                    android:layout_height="195dp"
+                    android:layout_width="400dp"
+                    android:layout_height="400dp"
                     app:srcCompat="@drawable/no_pic"
                     android:layout_margin="20dp"/>
 
                 <Button
                     android:id="@+id/btnAlterarFoto"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@id/img_cadastro_categoria"
-                    android:text="Alterar" />
+                    android:text="Alterar"
+                    app:icon="@drawable/ic_baseline_photo_camera_50"
+                    android:textSize="40dp" />
+
             </RelativeLayout>
+
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/ingredientesAtuais"
-                android:textSize="20dp"
+                android:textSize="40dp"
                 android:id="@+id/cadastroTxtIngredientesHelp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="\n"
-                android:textSize="20dp"
+                android:textSize="40dp"
                 android:id="@+id/cadastroListaIngredientes"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="40dp"
                 android:id="@+id/cadastroIngredienteAtual"
                 android:hint="@string/ingrediente"/>
 
@@ -82,25 +89,28 @@
 
                 <Button
                     android:id="@+id/cadastroBtnAdicionar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="450dp"
+                    android:layout_height="100dp"
                     android:backgroundTint="@color/ForestGreen"
                     android:text="@string/adicionar"
-                    app:icon="@drawable/ic_baseline_add_24" />
+                    android:textSize="50dp"
+                    app:icon="@drawable/ic_baseline_add_50" />
 
                 <Button
                     android:id="@+id/cadastroBtnLimpar"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="100dp"
                     android:layout_alignParentRight="true"
-                    android:text="@string/limpar"
                     android:backgroundTint="@color/red"
-                    app:icon="@drawable/ic_baseline_remove_24" />
+                    android:text="@string/limpar"
+                    android:textSize="50dp"
+                    app:icon="@drawable/ic_baseline_remove_50" />
             </RelativeLayout>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:textSize="40dp"
                 android:id="@+id/cadastroModoPreparo"
                 android:hint="@string/modoDePreparo"/>
 
@@ -108,19 +118,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/categoriaHelp"
-                android:textSize="20dp"
+                android:textSize="40dp"
                 android:id="@+id/cadastroTxtCategoriasHelp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/listaVazia"
-                android:textSize="15dp"
+                android:textSize="40dp"
                 android:id="@+id/cadastroTxtCategorias"/>
             <Button
-                android:layout_width="58dp"
-                android:layout_height="wrap_content"
-                app:icon="@drawable/ic_baseline_add_24"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:textSize="40dp"
+                app:icon="@drawable/ic_baseline_add_50"
                 android:backgroundTint="@color/ForestGreen"
                 android:id="@+id/btnSelecionarCategorias"/>
 
@@ -130,7 +141,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/dificuldade"
                 android:layout_gravity="center"
-                android:textSize="20dp"
+                android:textSize="50dp"
                 android:layout_marginTop="20dp"/>
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -141,32 +152,38 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="40dp"
                     android:text="1"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="40dp"
                     android:text="2"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="40dp"
                     android:text="3"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="40dp"
                     android:text="4"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="40dp"
                     android:text="5"/>
             </RadioGroup>
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="450dp"
+                android:layout_height="100dp"
                 android:text="@string/cadastrar"
                 android:layout_gravity="center"
+                android:textSize="50dp"
                 android:id="@+id/cadastroBtnCadastrar"
-                app:icon="@drawable/ic_baseline_add_task_24"/>
+                app:icon="@drawable/ic_baseline_add_task_50"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

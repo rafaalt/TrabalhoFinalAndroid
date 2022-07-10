@@ -20,7 +20,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="30dp"
+                android:textSize="50dp"
                 android:layout_marginTop="15dp"
                 android:layout_gravity="center"
                 android:textStyle="bold"
@@ -30,7 +30,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
+                android:textSize="40dp"
 
                 android:layout_gravity="center"
                 android:text="Autor"
@@ -41,27 +41,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/dificuldade"
-                android:textSize="15dp"
+                android:textSize="40dp"
                 android:layout_gravity="center" />
 
             <RatingBar
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:isIndicator="true"
                 android:layout_gravity="center"
                 android:numStars="5"
                 android:rating="3"
-                android:scaleX="1.5"
-                android:scaleY="1.5"
+                android:scaleX="4"
+                android:scaleY="4"
                 style="?android:attr/ratingBarStyleSmall"
                 android:id="@+id/rtn_detail_dificuldade" />
 
             <ImageView
                 android:id="@+id/img_receita_detail"
-                android:layout_marginTop="5dp"
-                android:layout_width="300dp"
-                android:layout_height="300dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="500dp"
+                android:layout_height="500dp"
                 android:layout_gravity="center"
                 app:srcCompat="@drawable/no_pic"/>
 
@@ -71,14 +71,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ingredientes"
-                android:textSize="25dp"
+                android:textSize="50dp"
                 android:layout_gravity="center"
                 android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="25dp"
+                android:textSize="50dp"
                 android:layout_marginTop="5dp"
                 android:text="Ingredientes"
                 android:id="@+id/txt_detail_ingredientes"/>
@@ -88,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/modoDePreparo1"
                 android:layout_marginTop="5dp"
-                android:textSize="25dp"
+                android:textSize="50dp"
                 android:layout_gravity="center"
                 android:textStyle="bold"/>
 
@@ -96,7 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:textSize="25dp"
+                android:textSize="50dp"
                 android:text="Modo de preparo"
                 android:id="@+id/txt_detail_preparo"/>
 
@@ -107,34 +107,30 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
                 android:text="@string/settings"
-                android:textSize="25dp"
+                android:textSize="50dp"
                 android:textStyle="bold" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="550dp"
+                android:layout_height="100dp"
                 android:text="@string/alterarFoto"
+                android:textSize="50dp"
                 android:layout_gravity="center"
                 android:id="@+id/detailBtnNovaFoto"
-                app:icon="@drawable/ic_baseline_add_photo_alternate_24"/>
+                app:icon="@drawable/ic_baseline_add_photo_alternate_50"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ditarReceita"
-                android:layout_gravity="center"
-                android:id="@+id/detailBtnEditar"
-                app:icon="@drawable/ic_baseline_settings_24"/>
+
 
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="600dp"
+                android:layout_height="100dp"
                 android:text="@string/removerReceita"
+                android:textSize="50dp"
                 android:layout_gravity="center"
                 android:backgroundTint="@color/red"
                 android:id="@+id/detailBtnRemover"
-                app:icon="@drawable/ic_baseline_clear_24"/>
+                app:icon="@drawable/ic_baseline_clear_50"/>
 
 
         </LinearLayout>

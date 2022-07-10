@@ -52,7 +52,6 @@ public class ReceitaDetailActivity extends AppCompat {
         RatingBar rtn_detail_dificuldades = findViewById(R.id.rtn_detail_dificuldade);
         Button btnRemover = findViewById(R.id.detailBtnRemover);
         Button bntNovaFoto = findViewById(R.id.detailBtnNovaFoto);
-        Button bntEditarFoto = findViewById(R.id.detailBtnEditar);
         Intent intent = getIntent();
         Receita receita = (Receita) intent.getSerializableExtra("receita");
         receitaAtual = receita;

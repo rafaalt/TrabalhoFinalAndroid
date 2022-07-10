@@ -26,67 +26,111 @@
 
             <CheckBox
                 android:id="@+id/checkBolo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="50dp"
+                android:layout_marginTop="10dp"
+                android:scaleX="1.00"
+                android:scaleY="1.30"
                 android:text="@string/Bolos" />
 
             <CheckBox
                 android:id="@+id/checkTorta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="50dp"
+                android:layout_marginTop="10dp"
+                android:scaleX="1.00"
+                android:scaleY="1.30"
                 android:text="@string/Tortas" />
 
             <CheckBox
                 android:id="@+id/checkDoce"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="50dp"
+                android:scaleX="1.00"
+                android:scaleY="1.30"
+                android:layout_marginTop="10dp"
                 android:text="@string/Doces" />
 
             <CheckBox
                 android:id="@+id/checkCarne"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="50dp"
+                android:scaleX="1.00"
+                android:scaleY="1.30"
+                android:layout_marginTop="10dp"
                 android:text="@string/Carnes" />
 
             <CheckBox
                 android:id="@+id/checkPeixe"
                 android:layout_width="wrap_content"
+                android:textSize="50dp"
+                android:scaleX="1.00"
+                android:scaleY="1.30"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="@string/Peixes" />
 
             <CheckBox
                 android:id="@+id/checkFrutos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="50dp"
+                android:scaleX="1.00"
+                android:scaleY="1.30"
+                android:layout_marginTop="10dp"
                 android:text="@string/FrutosdoMar" />
 
             <CheckBox
                 android:id="@+id/checkSalada"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="50dp"
+                android:scaleX="1.00"
+                android:scaleY="1.30"
+                android:layout_marginTop="10dp"
                 android:text="@string/Saladas" />
 
             <CheckBox
                 android:id="@+id/checkMolho"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="50dp"
+                android:scaleX="1.00"
+                android:scaleY="1.30"
+                android:layout_marginTop="10dp"
                 android:text="@string/Molhos" />
 
             <CheckBox
                 android:id="@+id/checkSopa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="50dp"
+                android:scaleX="1.00"
+                android:scaleY="1.30"
+                android:layout_marginTop="10dp"
                 android:text="@string/Sopas" />
 
             <CheckBox
                 android:id="@+id/checkMassa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="50dp"
+                android:scaleX="1.00"
+                android:scaleY="1.30"
+                android:layout_marginTop="10dp"
                 android:text="@string/Massas" />
 
             <CheckBox
                 android:id="@+id/checkBebida"
                 android:layout_width="wrap_content"
+                android:textSize="50dp"
+                android:scaleX="1.00"
+                android:scaleY="1.30"
+                android:layout_marginTop="10dp"
                 android:layout_height="wrap_content"
                 android:text="@string/Bebidas" />
 
@@ -94,24 +138,40 @@
                 android:id="@+id/checkSobremesa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="50dp"
+                android:scaleX="1.00"
+                android:scaleY="1.30"
+                android:layout_marginTop="10dp"
                 android:text="@string/Sobremesas" />
 
             <CheckBox
                 android:id="@+id/checkLanche"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="50dp"
+                android:scaleX="1.00"
+                android:scaleY="1.30"
+                android:layout_marginTop="10dp"
                 android:text="@string/Lanches" />
 
             <CheckBox
                 android:id="@+id/checkSaudavel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="50dp"
+                android:scaleX="1.00"
+                android:scaleY="1.30"
+                android:layout_marginTop="10dp"
                 android:text="@string/Saudavel" />
 
             <CheckBox
                 android:id="@+id/checkOutros"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="50dp"
+                android:scaleX="1.00"
+                android:scaleY="1.30"
+                android:layout_marginTop="10dp"
                 android:text="@string/Outros" />
 
             <Button
@@ -119,6 +179,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:textSize="50dp"
+                android:layout_marginTop="10dp"
+                app:icon="@drawable/ic_baseline_add_task_50"
                 android:text="@string/Salvar" />
 
         </LinearLayout>

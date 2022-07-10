@@ -120,6 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                app:icon="@drawable/ic_baseline_add_task_24"
                 android:text="@string/Salvar" />
 
         </LinearLayout>

@@ -118,13 +118,7 @@
                 android:id="@+id/detailBtnNovaFoto"
                 app:icon="@drawable/ic_baseline_add_photo_alternate_24"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ditarReceita"
-                android:layout_gravity="center"
-                android:id="@+id/detailBtnEditar"
-                app:icon="@drawable/ic_baseline_settings_24"/>
+
 
 
             <Button

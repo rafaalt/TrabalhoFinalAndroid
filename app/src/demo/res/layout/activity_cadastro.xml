@@ -52,6 +52,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@id/img_cadastro_categoria"
+                    app:icon="@drawable/ic_baseline_photo_camera_24"
                     android:text="Alterar" />
             </RelativeLayout>
 

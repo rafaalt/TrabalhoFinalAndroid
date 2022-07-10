@@ -52,6 +52,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@id/img_cadastro_categoria"
+                    app:icon="@drawable/ic_baseline_photo_camera_24"
                     android:text="Alterar" />
             </RelativeLayout>
 
@@ -93,8 +94,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="@string/limpar"
                     android:backgroundTint="@color/red"
+                    android:text="@string/limpar"
                     app:icon="@drawable/ic_baseline_remove_24" />
             </RelativeLayout>
 
