@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ReceitaAdapter"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/adapterImagem"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/no_pic" />
+
+    <TextView
+        android:id="@+id/adapterNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/adapterImagem"
+        android:text="Nome Receita"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/autor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adapterNome"
+        android:layout_toRightOf="@id/adapterImagem"
+        android:text="@string/autorHint1"
+        android:layout_marginLeft="10dp"
+        android:textSize="18dp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/adapterAutor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adapterNome"
+        android:layout_toRightOf="@id/autor"
+        android:text="Fulano"
+        android:textSize="18dp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/adaptarTxtDificuldade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adapterAutor"
+        android:layout_toRightOf="@id/adapterImagem"
+        android:layout_marginLeft="10dp"
+        android:text="@string/dificuldade1"
+        android:textSize="15dp" />
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="3"
+        style="?android:attr/ratingBarStyleSmall"
+        android:id="@+id/adapterDificuldade"
+        android:layout_below="@id/adapterAutor"
+        android:layout_toRightOf="@id/adaptarTxtDificuldade"/>
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/adapterBtnRemover"-->
+<!--        android:adjustViewBounds="true"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:layout_marginRight="15dp"-->
+<!--        android:background="@null"-->
+<!--        android:padding="15dp"-->
+<!--        android:onClick="buttonClick"-->
+<!--        android:src="@drawable/btn_remover" />-->
+
+</RelativeLayout>

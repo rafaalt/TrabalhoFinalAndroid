@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Livro de Receitas</string>
+    <string name="search">Buscar</string>
+    <string name="refresh">Atualizar</string>
+    <string name="settings">Configuração</string>
+    <string name="share">Compartilhar</string>
+    <string name="about">Informações</string>
+    <string name="exit">Sair</string>
+    <string name="cadastroDeReceita">Cadastro de Receita</string>
+    <string name="nomeHint">Nome</string>
+    <string name="autorHint">Autor</string>
+    <string name="autorHint1">Autor:</string>
+    <string name="ingredientesAtuais">Ingredientes Atuais:</string>
+    <string name="ingrediente">Ingrediente</string>
+    <string name="ingredientes">Ingredients</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="limpar">Limpar</string>
+    <string name="modoDePreparo">Modo de Preparo</string>
+    <string name="modoDePreparo1">Modo de Preparo:</string>
+    <string name="categoria">Categoria</string>
+    <string name="dificuldade">Dificuldade</string>
+    <string name="dificuldade1">Dificuldade:</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="alterarFoto">Alterar Foto</string>
+    <string name="removerReceita">Remover Receita</string>
+    <string name="ditarReceita">Editar Receita</string>
+    <string name="categoria1">Categorias</string>
+    <string name="receitas">Receitas</string>
+    <string name="categoriaHelp">Categorias Selecionadas:</string>
+    <string name="listaVazia">Lista vazia</string>
+    <string name="idioma">Selecione um idioma:</string>
+    <string name="categorias">Categorias</string>
+    <string name="Bolos">Bolos</string>
+    <string name="Tortas">Tortas</string>
+    <string name="Doces">Doces</string>
+    <string name="Carnes">Carnes</string>
+    <string name="Peixes">Peixes</string>
+    <string name="FrutosdoMar">Frutos do Mar</string>
+    <string name="Saladas">Saladas</string>
+    <string name="Molhos">Molhos</string>
+    <string name="Massas">Massas</string>
+    <string name="Sopas">Sopas</string>
+    <string name="Bebidas">Bebidas</string>
+    <string name="Sobremesas">Sobremesas</string>
+    <string name="Lanches">Lanches</string>
+    <string name="Saudavel">Saudavel</string>
+    <string name="Outros">Outros</string>
+    <string name="Salvar">Salvar</string>
+
+
+</resources>

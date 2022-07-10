@@ -71,16 +71,22 @@ public class ReceitaAdapter extends BaseAdapter {
         TextView autorReceita = retorno.findViewById(R.id.adapterAutor);
         RatingBar ratingBar = retorno.findViewById(R.id.adapterDificuldade);
         ImageView imageView = retorno.findViewById(R.id.adapterImagem);
-        try {
-            String filename = receitaAtual.getFotoDaReceita();
-            ContextWrapper cw = new ContextWrapper(context.getApplicationContext());
-            File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
-            File file = new File(directory, filename);
-            imageView.setImageDrawable(Drawable.createFromPath(file.toString()));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+        Thread thread = new Thread(){
+            @Override
+            public void run() {
+                super.run();
+                try {
+                    String filename = receitaAtual.getFotoDaReceita();
+                    ContextWrapper cw = new ContextWrapper(context.getApplicationContext());
+                    File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
+                    File file = new File(directory, filename);
+                    imageView.setImageDrawable(Drawable.createFromPath(file.toString()));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        thread.start();
         nomeReceita.setText(receitaAtual.getNome());
         autorReceita.setText(receitaAtual.getAutor());
         ratingBar.setRating(receitaAtual.getDificuldade());

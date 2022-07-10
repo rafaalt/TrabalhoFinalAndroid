@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.R;
+import edu.coltec.dupla.rafaelgabriel.trabalhofinal.utils.ImageUtils;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -14,7 +15,7 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-
+        ImageUtils imageUtils = new ImageUtils(this);
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override

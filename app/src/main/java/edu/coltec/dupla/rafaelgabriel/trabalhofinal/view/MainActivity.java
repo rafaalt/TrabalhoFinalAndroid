@@ -27,7 +27,6 @@ public class MainActivity extends AppCompat {
 
     ReceitaAdapter receitaAdapter;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +39,6 @@ public class MainActivity extends AppCompat {
         ListView lista = this.findViewById(R.id.mainList);
         receitaAdapter = new ReceitaAdapter(this);
         lista.setAdapter(receitaAdapter);
-
 
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

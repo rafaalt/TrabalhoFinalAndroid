@@ -14,7 +14,6 @@ public class AppDB extends SQLiteOpenHelper {
     private ImageUtils imageUtils;
     public AppDB(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
-        imageUtils = new ImageUtils(context);
     }
 
     @Override
