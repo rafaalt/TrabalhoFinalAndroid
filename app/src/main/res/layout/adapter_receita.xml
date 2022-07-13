@@ -11,7 +11,7 @@
         android:id="@+id/adapterImagem"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:src="@drawable/no_pic" />
+        android:src="@drawable/rc" />
 
     <TextView
         android:id="@+id/adapterNome"

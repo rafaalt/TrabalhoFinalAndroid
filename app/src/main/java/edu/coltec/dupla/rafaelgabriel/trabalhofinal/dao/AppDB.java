@@ -6,10 +6,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.bll.ReceitaBLL;
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.utils.ImageUtils;
+import edu.coltec.dupla.rafaelgabriel.trabalhofinal.utils.ReceitasInit;
 
 public class AppDB extends SQLiteOpenHelper {
 
-    private static final String DB_NAME = "DB_RECEITASAAB";
+    private static final String DB_NAME = "DB__RECEITAS";
     private static final int DB_VERSION = 1;
     private ImageUtils imageUtils;
     public AppDB(Context context) {
@@ -20,7 +21,9 @@ public class AppDB extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         //db.execSQL(CategoryDAO.CREATE_SCRIPT);
         db.execSQL(ReceitaDAO.CREATE_SCRIPT);
-        db.execSQL(ReceitaDAO.CREATE_RECEITA1);
+        db.execSQL(ReceitasInit.CREATE_RECEITA1);
+        db.execSQL(ReceitasInit.CREATE_RECEITA2);
+        db.execSQL(ReceitasInit.CREATE_RECEITA3);
     }
 
     @Override

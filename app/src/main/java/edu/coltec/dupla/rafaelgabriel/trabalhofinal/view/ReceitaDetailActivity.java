@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -45,6 +46,7 @@ public class ReceitaDetailActivity extends AppCompat {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_receita_detail);
 
+        ImageView imageView = findViewById(R.id.img_receita_detail);
         TextView txt_detail_nome = findViewById(R.id.txt_detail_nome);
         TextView txt_detail_autor = findViewById(R.id.txt_detail_autor);
         TextView txt_detail_preparo = findViewById(R.id.txt_detail_preparo);
@@ -57,10 +59,30 @@ public class ReceitaDetailActivity extends AppCompat {
         receitaAtual = receita;
         txt_detail_nome.setText(receita.getNome());
         txt_detail_autor.setText(receita.getAutor());
-        txt_detail_ingredientes.setText(receita.getIngredientes().toString());
+        String novoIngrediente = "";
+        for(String x : receita.getIngredientes())
+            novoIngrediente += x + "\n";
+        txt_detail_ingredientes.setText(novoIngrediente);
         txt_detail_preparo.setText(receita.getModoDePreparo());
         rtn_detail_dificuldades.setRating(receita.getDificuldade());
 
+        Thread thread = new Thread(){
+            @Override
+            public void run() {
+                super.run();
+                try {
+                    String filename = receitaAtual.getFotoDaReceita();
+                    ContextWrapper cw = new ContextWrapper(getApplicationContext());
+                    File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
+                    File file = new File(directory, filename);
+                    if(file.exists())
+                        imageView.setImageDrawable(Drawable.createFromPath(file.toString()));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        thread.start();
 
         btnRemover.setOnClickListener(view -> {
             if(receitaBLL.delete(receita))
