@@ -32,12 +32,6 @@
                 android:text="@string/Bolos" />
 
             <CheckBox
-                android:id="@+id/checkTorta"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Tortas" />
-
-            <CheckBox
                 android:id="@+id/checkDoce"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -55,23 +49,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Peixes" />
 
-            <CheckBox
-                android:id="@+id/checkFrutos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/FrutosdoMar" />
-
-            <CheckBox
-                android:id="@+id/checkSalada"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Saladas" />
-
-            <CheckBox
-                android:id="@+id/checkMolho"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Molhos" />
 
             <CheckBox
                 android:id="@+id/checkSopa"
@@ -90,24 +67,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Bebidas" />
-
-            <CheckBox
-                android:id="@+id/checkSobremesa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Sobremesas" />
-
-            <CheckBox
-                android:id="@+id/checkLanche"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Lanches" />
-
-            <CheckBox
-                android:id="@+id/checkSaudavel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Saudavel" />
 
             <CheckBox
                 android:id="@+id/checkOutros"

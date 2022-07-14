@@ -8,15 +8,80 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:padding="10dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="30dp">
 
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Bolos"
+            android:onClick="onCheckboxClicked"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/mainCheck1"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Carnes"
+            android:onClick="onCheckboxClicked"
+            android:layout_toRightOf="@id/mainCheck1"
+            android:id="@+id/mainCheck2"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Saladas"
+            android:layout_toRightOf="@id/mainCheck2"
+            android:onClick="onCheckboxClicked"
+            android:id="@+id/mainCheck3"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Bebidas"
+            android:layout_toRightOf="@id/mainCheck3"
+            android:onClick="onCheckboxClicked"
+            android:id="@+id/mainCheck4"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Doces"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/mainCheck1"
+            android:onClick="onCheckboxClicked"
+            android:id="@+id/mainCheck5"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Peixes"
+            android:layout_below="@id/mainCheck1"
+            android:layout_toRightOf="@id/mainCheck5"
+            android:onClick="onCheckboxClicked"
+            android:id="@+id/mainCheck6"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Massas"
+            android:layout_below="@id/mainCheck1"
+            android:layout_toRightOf="@id/mainCheck6"
+            android:onClick="onCheckboxClicked"
+            android:id="@+id/mainCheck7"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Outros"
+            android:layout_below="@id/mainCheck1"
+            android:onClick="onCheckboxClicked"
+            android:layout_toRightOf="@id/mainCheck7"
+            android:id="@+id/mainCheck8"/>
         <ListView
             android:id="@+id/mainList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
-            tools:listitem="@layout/adapter_receita" />
-
+            tools:listitem="@layout/adapter_receita"
+            android:layout_below="@id/mainCheck6"/>
     </RelativeLayout>
 
 

@@ -57,25 +57,15 @@ public class CadastroCategoria extends AppCompat {
 
 
     public void checkBoxControl() {
-        CheckBox cb1 = findViewById(R.id.checkTorta);
         CheckBox cb2 = findViewById(R.id.checkBolo);
         CheckBox cb3 = findViewById(R.id.checkDoce);
         CheckBox cb4 = findViewById(R.id.checkCarne);
         CheckBox cb5 = findViewById(R.id.checkPeixe);
-        CheckBox cb6 = findViewById(R.id.checkFrutos);
-        CheckBox cb7 = findViewById(R.id.checkSalada);
-        CheckBox cb8 = findViewById(R.id.checkMolho);
         CheckBox cb9 = findViewById(R.id.checkMassa);
         CheckBox cb10 = findViewById(R.id.checkSopa);
         CheckBox cb11 = findViewById(R.id.checkBebida);
-        CheckBox cb12 = findViewById(R.id.checkSobremesa);
         CheckBox cb13 = findViewById(R.id.checkOutros);
-        CheckBox cb14 = findViewById(R.id.checkLanche);
-        CheckBox cb15 = findViewById(R.id.checkSaudavel);
 
-        if(cb1.isChecked()){
-            categoriasSelecionadas.add(cb1.getText().toString());
-        }
         if(cb2.isChecked()){
             categoriasSelecionadas.add(cb2.getText().toString());
         }
@@ -88,15 +78,6 @@ public class CadastroCategoria extends AppCompat {
         if(cb5.isChecked()){
             categoriasSelecionadas.add(cb5.getText().toString());
         }
-        if(cb6.isChecked()){
-            categoriasSelecionadas.add(cb6.getText().toString());
-        }
-        if(cb7.isChecked()){
-            categoriasSelecionadas.add(cb7.getText().toString());
-        }
-        if(cb8.isChecked()) {
-            categoriasSelecionadas.add(cb8.getText().toString());
-        }
         if(cb9.isChecked()){
             categoriasSelecionadas.add(cb9.getText().toString());
         }
@@ -106,17 +87,8 @@ public class CadastroCategoria extends AppCompat {
         if(cb11.isChecked()){
             categoriasSelecionadas.add(cb11.getText().toString());
         }
-        if(cb12.isChecked()){
-            categoriasSelecionadas.add(cb12.getText().toString());
-        }
-        if(cb14.isChecked()){
-            categoriasSelecionadas.add(cb14.getText().toString());
-        }
         if(cb13.isChecked()){
             categoriasSelecionadas.add(cb13.getText().toString());
-        }
-        if(cb15.isChecked()){
-            categoriasSelecionadas.add(cb15.getText().toString());
         }
 
     }

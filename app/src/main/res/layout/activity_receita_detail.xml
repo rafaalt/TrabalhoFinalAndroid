@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="15dp"
     tools:context=".view.ReceitaDetailActivity">
 
     <ScrollView
@@ -57,13 +58,24 @@
                 style="?android:attr/ratingBarStyleSmall"
                 android:id="@+id/rtn_detail_dificuldade" />
 
-            <ImageView
-                android:id="@+id/img_receita_detail"
-                android:layout_marginTop="5dp"
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/no_pic"/>
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <ImageView
+                    android:id="@+id/img_receita_detail"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/no_pic"/>
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"
+                    android:id="@+id/barraProgresso"/>
+            </FrameLayout>
 
 
             <TextView

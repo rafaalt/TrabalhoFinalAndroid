@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -61,11 +62,12 @@ public class ReceitaDetailActivity extends AppCompat {
         txt_detail_autor.setText(receita.getAutor());
         String novoIngrediente = "";
         for(String x : receita.getIngredientes())
-            novoIngrediente += x + "\n";
+            novoIngrediente += " -" + x + "\n";
         txt_detail_ingredientes.setText(novoIngrediente);
         txt_detail_preparo.setText(receita.getModoDePreparo());
         rtn_detail_dificuldades.setRating(receita.getDificuldade());
-
+        ProgressBar progressBar = findViewById(R.id.barraProgresso);
+        progressBar.setVisibility(View.VISIBLE);
         Thread thread = new Thread(){
             @Override
             public void run() {
@@ -79,6 +81,9 @@ public class ReceitaDetailActivity extends AppCompat {
                         imageView.setImageDrawable(Drawable.createFromPath(file.toString()));
                 } catch (Exception e) {
                     e.printStackTrace();
+                } finally {
+                    ProgressBar progressBar = findViewById(R.id.barraProgresso);
+                    progressBar.setVisibility(View.INVISIBLE);
                 }
             }
         };
@@ -114,21 +119,19 @@ public class ReceitaDetailActivity extends AppCompat {
 
                 ContextWrapper cw = new ContextWrapper(getApplicationContext());
                 File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
+                Toast.makeText(this, receitaAtual.getFotoDaReceita(), Toast.LENGTH_SHORT).show();
                 File file = new File(directory, receitaAtual.getFotoDaReceita());
-                if(!file.exists()){
                     Log.d("path", file.toString());
                     FileOutputStream fos = null;
                     try{
                         fos = new FileOutputStream(file);
                         photoNew.compress(Bitmap.CompressFormat.JPEG, 100, fos);
-                        Toast.makeText(ReceitaDetailActivity.this, "Imagem salva com sucesso", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(ReceitaDetailActivity.this, "Imagem salva com sucesso", Toast.LENGTH_SHORT).show();
                         fos.flush();
                         fos.close();
                     }catch (Exception e){
                         e.printStackTrace();
                     }
-                }
-
                 //Converter para dados
                 byte[] fotoEmBytes;
                 ByteArrayOutputStream stremDaFotoEmBytes = new ByteArrayOutputStream();

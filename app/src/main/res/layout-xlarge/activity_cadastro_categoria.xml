@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="10dp"
     tools:context=".view.CadastroCategoria">
 
     <ScrollView
@@ -33,16 +34,6 @@
                 android:scaleX="1.00"
                 android:scaleY="1.30"
                 android:text="@string/Bolos" />
-
-            <CheckBox
-                android:id="@+id/checkTorta"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50dp"
-                android:layout_marginTop="10dp"
-                android:scaleX="1.00"
-                android:scaleY="1.30"
-                android:text="@string/Tortas" />
 
             <CheckBox
                 android:id="@+id/checkDoce"
@@ -74,35 +65,6 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/Peixes" />
 
-            <CheckBox
-                android:id="@+id/checkFrutos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50dp"
-                android:scaleX="1.00"
-                android:scaleY="1.30"
-                android:layout_marginTop="10dp"
-                android:text="@string/FrutosdoMar" />
-
-            <CheckBox
-                android:id="@+id/checkSalada"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50dp"
-                android:scaleX="1.00"
-                android:scaleY="1.30"
-                android:layout_marginTop="10dp"
-                android:text="@string/Saladas" />
-
-            <CheckBox
-                android:id="@+id/checkMolho"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50dp"
-                android:scaleX="1.00"
-                android:scaleY="1.30"
-                android:layout_marginTop="10dp"
-                android:text="@string/Molhos" />
 
             <CheckBox
                 android:id="@+id/checkSopa"
@@ -134,35 +96,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Bebidas" />
 
-            <CheckBox
-                android:id="@+id/checkSobremesa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50dp"
-                android:scaleX="1.00"
-                android:scaleY="1.30"
-                android:layout_marginTop="10dp"
-                android:text="@string/Sobremesas" />
-
-            <CheckBox
-                android:id="@+id/checkLanche"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50dp"
-                android:scaleX="1.00"
-                android:scaleY="1.30"
-                android:layout_marginTop="10dp"
-                android:text="@string/Lanches" />
-
-            <CheckBox
-                android:id="@+id/checkSaudavel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50dp"
-                android:scaleX="1.00"
-                android:scaleY="1.30"
-                android:layout_marginTop="10dp"
-                android:text="@string/Saudavel" />
 
             <CheckBox
                 android:id="@+id/checkOutros"

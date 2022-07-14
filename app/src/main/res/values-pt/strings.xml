@@ -46,4 +46,10 @@
     <string name="Saudavel">Saudavel</string>
     <string name="Outros">Outros</string>
     <string name="Salvar">Salvar</string>
+    <string name="VersaoPremio">Versão Premio</string>
+    <string name="AcessoPremio">Garanta o acesso ao cadastro de novas receitas!</string>
+    <string name="BtnEntendi">Entendi</string>
+    <string name="AlertAbout">Livro de Receitas</string>
+    <string name="ConteudoAbout">Dupla Gabriel e Rafael\nColtec - UFMG, Trabalho Final</string>
+    <string name="ResultSearch">Resultados encontradas para</string>
 </resources>

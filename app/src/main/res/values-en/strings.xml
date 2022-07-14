@@ -46,4 +46,10 @@
     <string name="Saudavel">Healthy</string>
     <string name="Outros">Others</string>
     <string name="Salvar">To save</string>
+    <string name="VersaoPremio">Premium Version</string>
+    <string name="AcessoPremio">Ensure access to the registration of new recipes!</string>
+    <string name="BtnEntendi">Understood</string>
+    <string name="AlertAbout">CookBook</string>
+    <string name="ConteudoAbout">Made by Gabriel e Rafael\nColtec - UFMG, Final Project</string>
+    <string name="ResultSearch">Results found for</string>
 </resources>

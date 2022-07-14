@@ -2,6 +2,7 @@ package edu.coltec.dupla.rafaelgabriel.trabalhofinal.dao;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Objects;
 
 public class Receita implements Serializable {
@@ -32,7 +33,8 @@ public class Receita implements Serializable {
         this.ingredientes = ingredientes;
         this.modoDePreparo = modoDePreparo;
         this.dificuldade = dificuldade;
-        this.fotoDaReceita = nome + ".jpeg";
+        String nomeSemEspaco = nome.replaceAll("\\s+","");
+        this.fotoDaReceita = nomeSemEspaco + ".jpeg";
     }
     public Receita(int id, String nome, String autor, ArrayList<String> categoria, ArrayList<String> ingredientes, String modoDePreparo, int dificuldade, String fotoDaReceita) {
         this.id = id;
@@ -110,17 +112,19 @@ public class Receita implements Serializable {
     }
 
     //Verifica se duas receitas sao iguais
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Receita receita = (Receita) o;
-        return Objects.equals(autor, receita.autor) && Objects.equals(nome, receita.nome);
+        return nome.equals(receita.nome);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(autor, nome);
+        return Objects.hash(nome);
     }
 
     public boolean isValid() {
@@ -138,5 +142,21 @@ public class Receita implements Serializable {
             return false;
 
         return true;
+    }
+
+    public boolean contemCategoria(String cat){
+        if(this.categoria.contains(cat))
+            return true;
+        else
+            return false;
+    }
+
+    public boolean contemTrechoNome(String x){
+        if(x.equals(""))
+            return true;
+        if(this.nome.toLowerCase().contains(x.toLowerCase()))
+            return true;
+
+        return false;
     }
 }

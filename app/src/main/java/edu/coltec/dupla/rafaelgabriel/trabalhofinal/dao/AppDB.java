@@ -10,16 +10,14 @@ import edu.coltec.dupla.rafaelgabriel.trabalhofinal.utils.ReceitasInit;
 
 public class AppDB extends SQLiteOpenHelper {
 
-    private static final String DB_NAME = "DB__RECEITAS";
+    private static final String DB_NAME = "DB_RECEITAS";
     private static final int DB_VERSION = 1;
-    private ImageUtils imageUtils;
     public AppDB(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        //db.execSQL(CategoryDAO.CREATE_SCRIPT);
         db.execSQL(ReceitaDAO.CREATE_SCRIPT);
         db.execSQL(ReceitasInit.CREATE_RECEITA1);
         db.execSQL(ReceitasInit.CREATE_RECEITA2);

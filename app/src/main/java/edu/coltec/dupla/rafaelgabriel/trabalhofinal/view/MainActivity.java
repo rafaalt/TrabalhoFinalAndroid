@@ -9,15 +9,19 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
 
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.R;
 import edu.coltec.dupla.rafaelgabriel.trabalhofinal.dao.Receita;
@@ -26,6 +30,7 @@ import edu.coltec.dupla.rafaelgabriel.trabalhofinal.utils.AppCompat;
 public class MainActivity extends AppCompat {
 
     ReceitaAdapter receitaAdapter;
+    ArrayList<String> categoriasSelecionadas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +38,7 @@ public class MainActivity extends AppCompat {
         setContentView(R.layout.activity_main);
         FloatingActionButton fab_telaDeCadastro = findViewById(R.id.floating_action_button);
 
+        categoriasSelecionadas = new ArrayList<>();
         BottomNavigationView bottomNav = findViewById(R.id.bottomNav);
         bottomNav.setSelectedItemId(R.id.receitas_bottomNav);
 
@@ -91,11 +97,12 @@ public class MainActivity extends AppCompat {
 
             @Override
             public boolean onQueryTextSubmit(String s) {
-                Toast.makeText(MainActivity.this, "Buscar o texto: " + s, Toast.LENGTH_SHORT).show();
                 return false;
             }
             @Override
             public boolean onQueryTextChange(String s) {
+                receitaAdapter.uptadeListByName(s);
+                receitaAdapter.notifyDataSetChanged();
                 return false;
             }
         });
@@ -108,18 +115,17 @@ public class MainActivity extends AppCompat {
 
         switch (id) {
             case R.id.action_search:
-                Toast.makeText(this, "Clicou no search", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.action_refresh:
                 AlertDialog.Builder alertBuilder1 = new AlertDialog.Builder(this);
 
                 alertBuilder1.setIcon(R.drawable.ic_baseline_emoji_events_24);
-                alertBuilder1.setTitle("Versão Premio");
-                alertBuilder1.setMessage("Garanta o acesso ao cadastro de novas receitas!");
+                alertBuilder1.setTitle(R.string.VersaoPremio);
+                alertBuilder1.setMessage(R.string.AcessoPremio);
 
-                alertBuilder1.setPositiveButton("Acessar", new DialogInterface.OnClickListener() {
+                alertBuilder1.setPositiveButton(R.string.BtnEntendi, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(getBaseContext(), "Você saiu da versão premio", Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getBaseContext(), "Você saiu da versão premio", Toast.LENGTH_LONG).show();
                     }
                 });
 
@@ -130,12 +136,12 @@ public class MainActivity extends AppCompat {
                 AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
 
                 alertBuilder.setIcon(R.drawable.ic_baseline_restaurant_24);
-                alertBuilder.setTitle("Receitas Agenda Facil");
-                alertBuilder.setMessage("Dupla Gabriel e Rafael  Coltec - UFMG, Trabalho Final");
+                alertBuilder.setTitle(R.string.AlertAbout);
+                alertBuilder.setMessage(R.string.ConteudoAbout);
 
                 alertBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(getBaseContext(), "Você saiu de About", Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getBaseContext(), "Você saiu de About", Toast.LENGTH_LONG).show();
                     }
                 });
 
@@ -147,11 +153,89 @@ public class MainActivity extends AppCompat {
         }
     }
 
+    public void onCheckboxClicked(View view) {
+        // Is the view now checked?
+        boolean checked = ((CheckBox) view).isChecked();
+        // Check which checkbox was clicked
+        switch (view.getId()) {
+            case R.id.mainCheck1:
+                //Toast.makeText(this, "Bolos", Toast.LENGTH_SHORT).show();
+                if (checked)
+                    this.categoriasSelecionadas.add("Bolos");
+                else {
+                    if (this.categoriasSelecionadas.contains("Bolos"))
+                        this.categoriasSelecionadas.remove("Bolos");
+                }
+                break;
+            case R.id.mainCheck2:
+                if (checked)
+                    this.categoriasSelecionadas.add("Carnes");
+                else {
+                    if (this.categoriasSelecionadas.contains("Carnes"))
+                        this.categoriasSelecionadas.remove("Carnes");
+                }
+                break;
+            case R.id.mainCheck3:
+                if (checked)
+                    this.categoriasSelecionadas.add("Saladas");
+                else {
+                    if (this.categoriasSelecionadas.contains("Saladas"))
+                        this.categoriasSelecionadas.remove("Saladas");
+                }
+                break;
+            case R.id.mainCheck4:
+                if (checked)
+                    this.categoriasSelecionadas.add("Bebidas");
+                else {
+                    if (this.categoriasSelecionadas.contains("Bebidas"))
+                        this.categoriasSelecionadas.remove("Bebidas");
+                }
+                break;
+            case R.id.mainCheck5:
+                if (checked)
+                    this.categoriasSelecionadas.add("Doces");
+                else {
+                    if (this.categoriasSelecionadas.contains("Doces"))
+                        this.categoriasSelecionadas.remove("Doces");
+                }
+                break;
+            case R.id.mainCheck6:
+                if (checked)
+                    this.categoriasSelecionadas.add("Peixes");
+                else {
+                    if (this.categoriasSelecionadas.contains("Peixes"))
+                        this.categoriasSelecionadas.remove("Peixes");
+                }
+                break;
+            case R.id.mainCheck7:
+                if (checked)
+                    this.categoriasSelecionadas.add("Massas");
+                else {
+                    if (this.categoriasSelecionadas.contains("Massas"))
+                        this.categoriasSelecionadas.remove("Massas");
+                }
+                break;
+            case R.id.mainCheck8:
+                if (checked)
+                    this.categoriasSelecionadas.add("Outros");
+                else {
+                    if (this.categoriasSelecionadas.contains("Outros"))
+                        this.categoriasSelecionadas.remove("Outros");
+                }
+                break;
+            default:
+                break;
+
+        }
+
+        receitaAdapter.updateList(categoriasSelecionadas);
+        receitaAdapter.notifyDataSetChanged();
+    }
+
     @Override
     protected void onResume() {
         super.onResume();
-
-        receitaAdapter.updateList();
+        receitaAdapter.updateList(categoriasSelecionadas);
         receitaAdapter.notifyDataSetChanged();
     }
 }
